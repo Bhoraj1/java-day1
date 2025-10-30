@@ -1,1 +1,121 @@
-1.Variables
+Connect Project to gitHub:
+1. https://youtu.be/HM6CawhRvVQ?si=nBWaq4K9v4HfrarF
+2. click VCL you don't see any commit icons in folder sections.
+
+
+--- 1.Variables ----
+public class Main {
+    public  static void main(String[] args){
+    int herAge = 18;
+    int myAge = herAge;
+    System.out.println(herAge);
+    }
+}
+
+--- 2. Types ----
+-- 2.1. Primitive types: For storing simple values.
+  type  Bytes   Range
+  byte  1       [-128,127]
+  sort  2       [-32k,32k]
+  int   4       [-2B,2B]
+  long  8       [
+  float 4
+  double 8
+  char   2       A,B,C,...
+  Boolean 1      true/false
+
+ // Code Example :
+ public class Main {
+     public  static void main(String[] args){
+     byte  age = 30;
+     int   viewsCount = 134_567_489;
+     long viewsCount2 = 3_123_456_789L;
+     float price = 10.99F;
+     char  letter  = 'A';
+     boolean isEligable = true;
+     System.out.println(letter);
+     }
+ }
+
+
+
+  -- 2.2. Reference types: For Storing complex values/objects
+  // Code Examples
+  import java.util.Date;
+
+  public class Main {
+      public  static void main(String[] args){
+      byte  age = 30;
+      Date now = new Date();
+      System.out.println(now);
+      }
+  }
+
+
+ -- 2.3 -- Different Between premitive and Reference type
+
+ public class Main {
+     public  static void main(String[] args){
+     byte  x = 1;
+     byte y = x;
+     x = 2;
+         System.out.println(y);
+     }
+ }
+
+ public class Main {
+     public  static void main(String[] args){
+         Point point1 = new Point(1,1);
+         Point point2 = point1;
+         point1.y = 2;
+         System.out.println(point2);
+     }
+ }
+
+
+
+
+ --- 3.Strings ---------
+
+public class Main {
+    public  static void main(String[] args){
+      String message = "   Hello World" + "!!";
+        String result = message.toUpperCase();
+        System.out.println("Original:"+ message);
+        System.out.println(result);
+        System.out.println(message.length());
+        System.out.println(message.indexOf("W"));
+        System.out.println(message.replace("!", "*"));
+        System.out.println(message.trim());
+
+        String message = "Hello \nWorld";
+           System.out.println(message);
+    }
+}
+
+--- 4. Arrays -----
+public class Main {
+    public  static void main(String[] args){
+     int[] numberss = {2,3,4,5,6,7};
+        Arrays.sort(numberss);
+        String results = Arrays.toString(numberss);
+        System.out.println(results);
+
+        // Anotehr
+        int[] numbers = new int[5];
+        numbers[0]=1;
+        numbers[1]=2;
+        String result =  Arrays.toString(numbers);
+        System.out.println(result);
+    }
+}
+
+
+--- Multi-dimensional Arrays -------
+
+
+
+
+
+
+
