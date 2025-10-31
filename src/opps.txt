@@ -65,5 +65,5 @@ public class Main {
 }
 
 
-
-
+----1. Polymorphism --------
+(many + forms): single work done by many ways is called polymorphism.

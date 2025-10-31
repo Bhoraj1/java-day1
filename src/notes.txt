@@ -2,6 +2,7 @@ Connect Project to gitHub:
 1. https://youtu.be/HM6CawhRvVQ?si=nBWaq4K9v4HfrarF
 2. click VCL you don't see any commit icons in folder sections.
 
+3. In java class name always start with Capital letter and function/method start with small letter.
 
 --- 1.Variables ----
 public class Main {
