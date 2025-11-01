@@ -1,66 +1,20 @@
-// Types of Constructors in java
-//1. Non-parameterized constructors
-//2.parameterized constructors
-//3. Copy constructors
-
-
-class Pen {
+class Shape {
     String color;
     String type;
-
-
-    public  void printColor(){
-        System.out.println("The Color of the Pen is " + this.color);
     }
+
+class Triangle extends Shape {
+  public  void printInfo(String color){
+      System.out.println(this.color);
+  }
 }
-
-
-class Student {
-    String name;
-    int age;
-
-    public  void printInfo(){
-        System.out.println(this.name);
-        System.out.println(this.age);
-    }
-
-
-    // non-parameterized  constructor
-    Student(){
-        System.out.println("constructor called");
-    }
-
-    // Parameterized constructor
-    Student(String name, int age){
-       this.name = name;
-       this.age = age;
-    }
-
-    // Copy constructor
-    Student(Student pen1){
-        this.name = pen1.name;
-        this.age = pen1.age;
-    }
-}
-
-
 
 public class Main {
     public  static void main(String[] args){
-        // ClassName objectName = new ClassName();
-        // non-parameterized  constructor
-        Pen pen1 = new Pen();
-        pen1.color="RED";
-        pen1.type = "GEL PEN";
+     Triangle t1 = new Triangle();
+             t1.color = "Red";
+             t1.printInfo(t1.color);
 
-
-        // Parameterized constructors
-        Student s1 = new Student("Aman",24);
-
-
-        // Copy Constructors
-        Student s2 = new Student(s1);
-        s2.printInfo();
     }
 }
 

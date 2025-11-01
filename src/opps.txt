@@ -66,4 +66,85 @@ public class Main {
 
 
 ----1. Polymorphism --------
-(many + forms): single work done by many ways is called polymorphism.
+(many + forms): single work done by many ways is called polymorphism. or we can say : same function name can be used
+for and different purpose.
+1.1 types of polymorphism
+i. Function OverRiding(run time)
+ii. Function Overloading(compile time)
+
+class Student {
+    String name;
+    int age;
+
+    public void printInfo(String name) {
+        System.out.println(name);
+    }
+
+    public void printInfo(int age) {
+        System.out.println(age);
+    }
+
+    public  void printInfo(String name,int age){
+        System.out.println(name + " " + age);
+    }
+}
+
+public class Main {
+    public  static void main(String[] args){
+        Student s1 = new Student();
+                s1.name = "ram";
+                s1.age = 20;
+                s1.printInfo(s1.name,s1.age);
+
+    }
+}
+
+
+--- Inheritance ------- ( passing and one class properties to another class is called inheritance)
+class Shape {
+    String color;
+    String type;
+    }
+
+class Triangle extends Shape {
+  public  void printInfo(String color){
+      System.out.println(this.color);
+  }
+}
+
+public class Main {
+    public  static void main(String[] args){
+     Triangle t1 = new Triangle();
+             t1.color = "Red";
+             t1.printInfo(t1.color);
+
+    }
+}
+
+-- Types of Inheritance ----
+1.Single level Inheritance
+class Shape {
+    String color;
+    String type;
+    }
+
+class Triangle extends Shape {
+  public  void printInfo(String color){
+      System.out.println(this.color);
+  }
+}
+
+public class Main {
+    public  static void main(String[] args){
+     Triangle t1 = new Triangle();
+             t1.color = "Red";
+             t1.printInfo(t1.color);
+
+    }
+}
+
+ii.Multi level inheritance
+
+
+
+
