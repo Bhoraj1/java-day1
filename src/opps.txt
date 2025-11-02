@@ -144,6 +144,161 @@ public class Main {
 }
 
 ii.Multi level inheritance
+class Shape {
+   public  void area (){
+       System.out.println("Display area.");
+   }
+    }
+
+class Triangle extends Shape {
+  public  void area(int l, int h){
+      System.out.println(1/2*l*h);
+  }
+}
+
+class  EquilateralTriangle extends Triangle {
+    public  void area (int l, int h){
+        System.out.println(1/2*l*h);
+    }
+}
+
+class  Circle extends Shape{
+    public void area(int r){
+        System.out.println(3.14*r*r);
+    }
+
+}
+
+public class Main {
+    public  static void main(String[] args){
+     Triangle t1 = new Triangle();
+
+    }
+}
+
+
+
+
+----Access Modifiers ------------
+//Access Modifiers
+
+package Bank;
+
+class Account {
+    public  String name;
+    protected String email;
+    private  String password;
+
+    // getters and setters
+    public String getPassword(){
+        return this.password;
+    }
+
+    public void setPassword(String pass){
+        this.password = pass;
+    }
+}
+
+public class Bank {
+    public  static  void main(String args[]){
+        Account account1 = new Account ();
+        account1.name= "apna college";
+        account1.email = "appnacollege@gmail.com";
+        account1.setPassword("abcd");
+        System.out.println(account1.getPassword());
+
+
+    }
+
+}
+
+
+------- Abstraction ----------
+Rules: 1. must be declared with an abstract keywords.
+       2. can have abstract and non-abstract methods.
+       3.can't be instantiated|| can't create object.
+       4.can have constructors and static methods also.
+       5.
+
+  abstract class Animal{
+      abstract void walk();
+
+      public  void eat(){
+          System.out.println("Animal eats");
+      }
+
+      // Constructor
+      Animal(){
+          System.out.println("You are creating a new animal");
+      }
+  }
+
+  class Horse extends Animal{
+      public  void walk(){
+          System.out.println("Walks on 4 legs");
+      }
+  }
+
+  class Chicken extends  Animal{
+      public  void walk(){
+          System.out.println("Walks on 2 legs");
+      }
+  }
+
+  public class Main {
+      public  static void main(String[] args){
+       Horse horse = new Horse();
+       horse.walk();
+       horse.eat();
+      }
+  }
+
+
+  -- Interface ---
+  1. Fields in interfaces are public,static and final by default.
+  2.All methods are public and abstract by default.
+  3.A class that implements an interface must implement all the methods declared in the interface.
+  4.Interfaces support the functionality of multiple inheritance.
+
+interface Animal{
+    int eyes = 2;
+    void  walk();
+}
+
+  class Horse implements Animal{
+      public void  walk(){
+          System.out.println("Walks on 4 legs");
+      }
+  }
+
+  public class Main {
+      public  static void main(String[] args){
+       Horse horse = new Horse();
+       horse.walk();
+      }
+  }
+
+
+-------- Static keywords -------------
+class Student{
+    String name;
+    static  String school;
+}
+
+
+public class Main {
+    public  static void main(String[] args){
+       Student.school = "DRMPI";
+       Student std = new Student();
+       std.name="Ram";
+        System.out.println(std.school);
+    }
+}
+
+
+
+
+
 
 
 
